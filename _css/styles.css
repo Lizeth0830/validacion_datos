@@ -84,7 +84,7 @@ input.invalido, textarea.invalido {
 }
 
 #barraProgreso {
-  background-color: #d63384;
+  background-color: #9c17ad;
   height: 100%;
   width: 0%;
   border-radius: 10px;
@@ -95,7 +95,7 @@ input.invalido, textarea.invalido {
   right: 10px;
   top: -20px;
   font-size: 13px;
-  color: #d63384;
+  color: #9c17ad;
 }
 
 .botones {

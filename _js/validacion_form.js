@@ -62,7 +62,9 @@ document.getElementById('correo').addEventListener('input', function () {
 });
 
 // Validación de confirmación de correo
-document.getElementById('confirmarCorreo').addEventListener('input', function () {
+const confirmarCorreoInput = document.getElementById('confirmarCorreo');
+
+confirmarCorreoInput.addEventListener('input', function () {
   const correo = document.getElementById('correo').value;
 
   if (this.value !== correo) {
@@ -72,6 +74,21 @@ document.getElementById('confirmarCorreo').addEventListener('input', function ()
     mostrarExito('exitoConfirmarCorreo', '✓ Correos coinciden');
     marcarCampo(this, true);
   }
+});
+
+// Bloquear copiar, cortar y pegar en confirmarCorreo
+confirmarCorreoInput.addEventListener('paste', function (e) {
+  e.preventDefault();
+  alert('No puedes pegar el correo aquí. Por favor escríbelo manualmente.');
+});
+
+confirmarCorreoInput.addEventListener('copy', function (e) {
+  e.preventDefault();
+  alert('No puedes copiar este campo.');
+});
+
+confirmarCorreoInput.addEventListener('cut', function (e) {
+  e.preventDefault();
 });
 
 // Validación de contraseña con indicador de fortaleza
