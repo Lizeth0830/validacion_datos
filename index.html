@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport", content="width=device-width, initial-scale=1.0" />
+        <title>Formulario con validación avanzada</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="_css/styles.css">
+    </head>
+    <body>
+        <main class="contenedor-formulario">
+            <section class="tarjeta">
+                <h2><i class="fas fa-user-circle"></i> Registro de correo electrónico</h2>
+                <form id="formularioAvanzado">
+                    <div class="campo">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombres:</label>
+                        <input type="text" id="nombre" name="nombre" autofocus/>
+                        <span id="errorNombre" class="mensaje-error"></span>
+                        <span id="exitoNombre" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellidos"><i class="fas fa-user-tag"></i> Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" />
+                        <span id="errorApellidos" class="mensaje-error"></span>
+                        <span id="exitoApellidos" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" />
+                        <span id="errorCorreo" class="mensaje-error"></span>
+                        <span id="exitoCorreo" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmarCorreo"><i class="fas fa-envelope-open-text"></i> Confirmar Correo electrónico:</label>
+                        <input type="email" id="confirmarCorreo" name="confirmarCorreo" />
+                        <span id="errorConfirmarCorreo" class="mensaje-error"></span>
+                        <span id="exitoConfirmarCorreo" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+                        <input type="password" id="password" name="password" />
+                        <div id="strengthBar" class="password-strength"></div>
+                        <span id="errorPassword" class="mensaje-error"></span>
+                        <span id="exitoPassword" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmarPassword"><i class="fas fa-lock"></i> Confirmar contraseña:</label>
+                        <input type="password" id="confirmarPassword" name="confirmarPassword" />
+                        <span id="errorConfirmar" class="mensaje-error"></span>
+                        <span id="exitoConfirmar" class="mensaje-exito"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comentarios"><i class="fas fa-comment-dots"></i> Comentarios (opcional):</label>
+                        <textarea id="comentarios" name="comentarios" maxlength="500"></textarea>
+                        <small>Caracteres: <span id="contadorComentarios">0</span></small>
+                    </div>
+
+                    <div class="campo">
+                        <label><input type="checkbox" id="terminos" name="terminos" /> Acepto los términos y condiciones</label>
+                        <span id="errorTerminos" class="mensaje-error"></span>
+                    </div>
+
+                    <div class="barra-progreso">
+                        <div id="barraProgreso"></div>
+                        <span id="porcentajeProgreso">0%</span>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" id="btnEnviar" disabled>Enviar</button>
+                        <button type="button" onclick="reiniciarFormulario()">Reiniciar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="tarjeta resumen" id="resumenDatos" style="display: none;">
+                <h3><i class="fas fa-check-circle"></i> Resumen del formulario</h3>
+                <div id="contenidoResumen"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Formulario con validación avanzada - Lizeth Gutierrez - 3147235</p>
+        </footer>
+
+        <script src="_js/validacion_form.js"></script>
+    </body>
+</html>

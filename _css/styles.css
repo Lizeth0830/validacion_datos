@@ -1,0 +1,119 @@
+
+body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #be32ff, #c62ae6);
+      color: #333;
+    }
+
+.contenedor-formulario {
+  max-width: 800px;
+  margin: auto;
+}
+
+.tarjeta {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.tarjeta h2, .tarjeta h3 {
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+input.valido, textarea.valido {
+  border-color: #28a745;
+}
+
+input.invalido, textarea.invalido {
+  border-color: #dc3545;
+}
+
+.mensaje-error {
+  color: #dc3545;
+  display: none;
+  font-size: 13px;
+}
+
+.mensaje-exito {
+  color: #28a745;
+  display: none;
+  font-size: 13px;
+}
+
+.password-strength {
+  height: 8px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.strength-weak { background-color: #f87171; width: 25%; }
+.strength-medium { background-color: #facc15; width: 50%; }
+.strength-strong { background-color: #4ade80; width: 75%; }
+.strength-very-strong { background-color: #16a34a; width: 100%; }
+
+.barra-progreso {
+  height: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+
+#barraProgreso {
+  background-color: #d63384;
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+}
+
+#porcentajeProgreso {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 13px;
+  color: #d63384;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #de7eeb;
+  color: #0f0b0b;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #843ab6;
+}
